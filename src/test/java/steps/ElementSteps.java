@@ -28,7 +28,6 @@ public class ElementSteps {
     public void the_user_can_see_the_option_in_dropdown(String options, String dropdownName) {
         List<String> optionList = Arrays.stream(options.split(", ")).sorted().toList();
         Assert.assertTrue(elementPage.isOptionVisibled(dropdownName, optionList));
-
     }
 
     @Then("the user can see the option in each dropdown:")

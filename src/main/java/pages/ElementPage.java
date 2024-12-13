@@ -29,7 +29,6 @@ public class ElementPage extends BasePage {
     public void selectDropdownByText(String option, String dropdownName) {
         Select dropdown = new Select(driver.findElement(By.xpath(String.format("//select[@id='%s']", dropdownName))));
         dropdown.selectByVisibleText(option);
-
     }
 
     public boolean isSelectedOptionVisible(String value, String dropdownName) {
