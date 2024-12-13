@@ -3,16 +3,12 @@ package steps;
 import core.BaseTest;
 import core.ConfigReader;
 import io.cucumber.java.en.*;
-import org.apache.commons.logging.Log;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import pages.ContactPage;
 import pages.ElementPage;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class ElementSteps {
 
