@@ -1,5 +1,6 @@
 package steps;
 
+import core.BasePage;
 import core.BaseTest;
 import core.ConfigReader;
 import io.cucumber.datatable.DataTable;
@@ -14,15 +15,8 @@ import java.util.Map;
 
 public class ElementSteps {
 
-    WebDriver driver;
-    ElementPage elementPage;
-
-    @Given("user is on Dropdown-Checkboxes-RadioButtons page")
-    public void user_is_on_Dropdown_Checkboxes_RadioButtons_page() {
-        driver = BaseTest.getDriver();
-        elementPage = new ElementPage(driver);
-        elementPage.navigateTo((ConfigReader.getPageUrl("elementPageURL")));
-    }
+    WebDriver driver = BaseTest.getDriver();
+    ElementPage elementPage = new ElementPage(driver);
 
     @Then("the user can see the option {string} in dropdown {string}")
     public void the_user_can_see_the_option_in_dropdown(String options, String dropdownName) {

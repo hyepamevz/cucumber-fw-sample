@@ -1,6 +1,7 @@
 package pages;
 
 import core.BasePage;
+import core.BaseTest;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,15 +23,16 @@ public class LoginPage extends BasePage {
 
     // Page-specific actions
     public void login(String username, String password) {
-        this.waitUntilVisibilityOf(usernameField).click();
+        usernameField.click();
         usernameField.sendKeys(username);
-        this.waitUntilVisibilityOf(passwordField).click();
+        passwordField.click();
         passwordField.sendKeys(password);
         loginButton.click();
     }
 
     public boolean verifyWarningAlertExist() {
         Alert alert = driver.switchTo().alert();
+        System.out.printf(alert.getText());
         return Objects.equals(alert.getText(), "validation failed");
     }
 }

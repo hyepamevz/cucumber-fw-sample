@@ -2,6 +2,7 @@ package pages;
 
 import com.github.javafaker.Faker;
 import core.BasePage;
+import core.BaseTest;
 import core.ConfigReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -34,7 +35,7 @@ public class ContactPage extends BasePage {
         this.waitForPageLoad();
     }
 
-    public void addComment(String comment){
+    public void addComment(String comment) {
         this.waitUntilVisibilityOf(commentTxtArea).sendKeys(comment);
     }
 

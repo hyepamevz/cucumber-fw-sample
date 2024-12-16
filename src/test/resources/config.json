@@ -1,5 +1,5 @@
 {
   "loginURL": "https://www.webdriveruniversity.com/Login-Portal/index.html",
   "contactURL": "https://www.webdriveruniversity.com/Contact-Us/contactus.html",
-  "elementPageURL": "https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html"
+  "elementURL": "https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html"
 }

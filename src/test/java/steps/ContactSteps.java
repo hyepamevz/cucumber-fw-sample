@@ -9,17 +9,10 @@ import pages.ContactPage;
 
 public class ContactSteps {
 
-    WebDriver driver;
-    ContactPage contactPage;
+    WebDriver driver = BaseTest.getDriver();
+    ContactPage contactPage = new ContactPage(driver);
 
-    @Given("user is on contact page")
-    public void user_is_on_contact_page() {
-        driver = BaseTest.getDriver();
-        contactPage = new ContactPage(driver);
-        contactPage.navigateTo((ConfigReader.getPageUrl("contactURL")));
-    }
-
-    @When("the user submit name and email")
+    @When("the user submit fields")
     public void the_user_submit_name_and_email() {
         contactPage.submitContact();
     }
